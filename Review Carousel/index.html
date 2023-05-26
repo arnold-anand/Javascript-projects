@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Carousel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col justify-center items-center h-screen">
+    <div class="flex flex-col justify-center items-center">
+      <div class="text-4xl">Our Review</div>
+      <div class="bg-blue-400 w-32 h-1 m-2"></div>
+      <div
+        class="w-[45%] shadow-lg rounded-md flex flex-col justify-center items-center p-3"
+      >
+        <img
+          id="person-img"
+          class="rounded-full"
+          src="https://loremflickr.com/g/200/200/girl,office/all"
+          alt=""
+        />
+        <span class="tracking-widest" id="author">Sara Jones</span>
+        <span class="tracking-widest text-blue-400" id="job"
+          >Web Developer</span
+        >
+        <p id="info" class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam
+          facere iure deleniti, cupiditate maxime. Debitis ratione, aliquam
+          ipsum dignissimos quia optio magni adipisci, cupiditate
+          exercitationem, voluptates nobis aperiam voluptate.
+        </p>
+        <div class="flex space-x-5 my-3">
+          <button id="prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6 text-blue-500"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button id="next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6 text-blue-500"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <button id="surpme" class="m-4 bg-blue-400 rounded-md p-2">
+          Surprise me !
+        </button>
+      </div>
+    </div>
+    <script>
+      const reviews = [
+        {
+          id: 1,
+          name: "Susan Smith",
+          job: "Web Developer",
+          img: "https://loremflickr.com/g/200/200/girl,office/all",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam facere iure deleniti, cupiditate maxime. Debitis ratione, aliquam ipsum dignissimos quia optio magni adipisci, cupiditate exercitationem, voluptates nobis aperiam voluptate.",
+        },
+        {
+          id: 2,
+          name: "Anna Johnson",
+          job: "Web Designer",
+          img: "https://loremflickr.com/g/200/200/girl,office/all",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam facere iure deleniti, cupiditate maxime. Debitis ratione, aliquam ipsum dignissimos quia optio magni adipisci, cupiditate exercitationem, voluptates nobis aperiam voluptate.",
+        },
+        {
+          id: 3,
+          name: "Peter Jones",
+          job: "Web Designer",
+          img: "https://loremflickr.com/g/200/200/man,office/all",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam facere iure deleniti, cupiditate maxime. Debitis ratione, aliquam ipsum dignissimos quia optio magni adipisci, cupiditate exercitationem, voluptates nobis aperiam voluptate.",
+        },
+      ];
+      const img = document.getElementById("person-img");
+      const author = document.getElementById("author");
+      const job = document.getElementById("job");
+      const info = document.getElementById("info");
+
+      const prevbtn = document.getElementById("prev");
+      const nextbtn = document.getElementById("next");
+      const randombtn = document.getElementById("surpme");
+
+      let currentItem = 0;
+      window.addEventListener("DOMContentLoaded", function () {
+        showPerson();
+      });
+      function showPerson() {
+        const item = reviews[currentItem];
+        img.src = item.img;
+        author.innerText = item.name;
+        job.innerText = item.job;
+        info.innerText = item.text;
+      }
+      prevbtn.addEventListener("click", function () {
+        currentItem--;
+        if (currentItem < 0) {
+          currentItem = reviews.length - 1;
+        }
+        showPerson();
+      });
+      nextbtn.addEventListener("click", function () {
+        currentItem++;
+        if (currentItem > reviews.length - 1) {
+          currentItem = 0;
+        }
+        showPerson();
+      });
+      randombtn.addEventListener("click", function () {
+        currentItem = Math.floor(Math.random() * reviews.length);
+        showPerson();
+      });
+    </script>
+  </body>
+</html>
