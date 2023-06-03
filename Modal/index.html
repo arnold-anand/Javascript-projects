@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#252525]">
+    <center>
+        <button id="openbtn" class="m-5  p-2 rounded-lg bg-green-700">Toggle Modal</button>
+        <p class="text-white text-justify p-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim laborum ex, doloremque vero, esse itaque, sequi quasi nisi voluptates beatae dolorum blanditiis. Ipsa ratione quos accusamus, placeat quaerat corporis unde quibusdam consequatur natus dolorem numquam odit minima minus neque qui pariatur in id quidem velit dolore officia adipisci exercitationem aut aliquam? Quod magnam recusandae repudiandae pariatur odio voluptatum repellendus? Sed, cum fugit magnam asperiores tempora consectetur odio unde sequi ad possimus, iure dolorum odit alias sint tenetur quis fuga molestiae quidem nam quas. Libero dolorum veniam praesentium ratione nostrum harum consequuntur odio quasi sint aliquid eaque repellat, voluptatibus beatae minus reiciendis, iste nihil ducimus magnam eum incidunt. Temporibus, inventore, deserunt quisquam ipsam veritatis illo explicabo, incidunt est ducimus odio vitae. Neque, repellat tempora. Dolores nihil ea nobis sint culpa. Nulla voluptas nisi blanditiis, placeat repudiandae ut vero. Repellat voluptatem ipsum illo iusto ducimus molestias quos doloremque quis illum odio, quaerat beatae vitae laboriosam suscipit culpa mollitia dolore perspiciatis nulla sed modi saepe distinctio praesentium inventore. Libero id quae molestiae accusamus dolorum obcaecati, dolorem voluptatem, beatae tempora quidem minus in, molestias minima sit commodi. Assumenda, harum beatae omnis saepe corporis error cum totam minus sunt vitae aliquid at quaerat reiciendis quis tenetur consequatur accusamus iusto laborum qui! Doloribus velit mollitia reiciendis nostrum cumque possimus similique ea, aperiam recusandae. Ipsa iure consequuntur id assumenda aut dolor beatae illo minus quae dignissimos, exercitationem saepe ratione repellendus quisquam ut voluptatibus nostrum fuga asperiores ipsam laboriosam. Obcaecati quibusdam eos cum eaque officiis quis facere cumque, ea dolores quos saepe perferendis neque omnis. Incidunt, nisi vitae? Tempore rem minima illo aliquid doloribus eius et voluptatum rerum facere atque commodi nobis reiciendis incidunt culpa non molestiae explicabo, sint fuga aut est quo sunt officiis praesentium dicta! Perferendis sapiente odit et quo ipsam esse iure voluptatibus voluptatem accusamus, veritatis itaque officia magni, odio nesciunt in aut! Suscipit maxime quisquam voluptatibus cum? Nulla, aliquam beatae soluta consectetur maxime officia error, libero commodi nostrum aut mollitia placeat aliquid ipsum aspernatur rerum aperiam distinctio veniam. Odit, quaerat! At, ut rerum, consectetur quae eaque aperiam sit sint eum molestiae, tenetur ipsa id quos quibusdam ad. Exercitationem voluptatum accusantium similique eveniet doloremque suscipit earum architecto. Porro ullam accusantium mollitia eos eaque impedit praesentium, repudiandae rem dolor a ex quaerat accusamus optio perspiciatis, voluptatibus omnis obcaecati quis veritatis nulla fugit distinctio, excepturi itaque nam. Necessitatibus blanditiis, id odio nobis architecto omnis voluptate inventore animi. Placeat aliquam quia esse expedita reprehenderit non, beatae explicabo. Ducimus repellendus nesciunt a id rem iure, sit nemo facilis incidunt, nobis possimus nisi recusandae repudiandae eaque eveniet illum adipisci vel vitae animi maiores consequatur dolore mollitia! Voluptatibus iste doloribus dolorem reprehenderit ab nam enim quas explicabo repudiandae dolore, molestias tempora corrupti voluptates assumenda ea accusantium veniam quaerat provident quae? Voluptatibus assumenda deleniti praesentium! Pariatur, eligendi perspiciatis! Consectetur qui ea impedit dicta atque fugiat dolorum consequuntur corrupti. Soluta odit itaque possimus saepe ipsum nisi ullam commodi, mollitia voluptatum est, voluptatem ex placeat eos ducimus. Quod labore quibusdam animi autem quis necessitatibus!</p>
+    </center>
+    <div id="modal" class="hidden">
+        <div class="fixed inset-0 flex justify-center items-center backdrop-blur-lg">
+            <div class="w-[30%] h-[35%] border rounded-lg flex justify-center items-center flex-col space-y-5">
+                <div><img class="w-10" src="confirm-icon.png" alt=""></div>
+                <div class="text-white">Registration Successful</div>
+                <div><button id="okbtn" class="bg-green-600 w-20 p-1 rounded-md text-white">OK</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const openbtn = document.getElementById('openbtn')
+    const modal = document.getElementById('modal')
+    const okbtn = document.getElementById('okbtn')
+    openbtn.addEventListener('click', function(){
+        modal.classList.replace('hidden', 'block')
+    })
+    okbtn.addEventListener('click', function(){
+        modal.classList.replace('block', 'hidden')
+    })
+    </script>
+</body>
+</html>
