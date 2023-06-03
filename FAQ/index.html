@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-sky-100 font-mono ">
+    <div class="flex justify-center items-center m-10 flex-col">
+        <div class="text-4xl">General Questions</div>
+        <div class="my-10 w-[60%] space-y-7">
+            <div class="border bg-white p-3 rounded-md">
+                <div class="flex justify-between items-center my-2">
+                    <div>Do you accept all major credit cards?</div>
+                    <div id="btn1" class="duration-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                          </svg>    
+                    </div>
+                </div>
+                <div class="border w-full"></div>
+                <div id="desc1" class="hidden transition duration-700 ease-in-out">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio velit error quae magni molestias illum, asperiores excepturi nulla quod. Impedit error, totam, ex possimus nisi magnam nihil ipsam sequi quo labore rerum nam commodi natus illum sit laudantium, aliquam eius harum rem at. Iusto quod excepturi, debitis assumenda at neque.
+                </div>
+            </div>
+            <div class="border bg-white p-3 rounded-md">
+                <div class="flex justify-between items-center my-2">
+                    <div>Do you support local famers?</div>
+                    <div id="btn2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                          </svg>    
+                    </div>
+                </div>
+                <div class="border w-full"></div>
+                <div id="desc2" class="hidden transition duration-700 ease-in-out">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio velit error quae magni molestias illum, asperiores excepturi nulla quod. Impedit error, totam, ex possimus nisi magnam nihil ipsam sequi quo labore rerum nam commodi natus illum sit laudantium, aliquam eius harum rem at. Iusto quod excepturi, debitis assumenda at neque.
+                </div>
+            </div>
+            <div class="border bg-white p-3 rounded-md">
+                <div class="flex justify-between items-center my-2">
+                    <div>Do you use organic ingredients ?</div>
+                    <div id="btn3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                          </svg>    
+                    </div>
+                </div>
+                <div class="border w-full"></div>
+                <div id="desc3" class="hidden transition duration-700 ease-in-out">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio velit error quae magni molestias illum, asperiores excepturi nulla quod. Impedit error, totam, ex possimus nisi magnam nihil ipsam sequi quo labore rerum nam commodi natus illum sit laudantium, aliquam eius harum rem at. Iusto quod excepturi, debitis assumenda at neque.
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script>
+    const btn1 = document.getElementById('btn1')
+    const btn2 = document.getElementById('btn2')
+    const btn3 = document.getElementById('btn3')
+    const desc1 = document.getElementById('desc1')
+    const desc2 = document.getElementById('desc2')
+    const desc3 = document.getElementById('desc3')
+
+    btn1.addEventListener('click', function(){
+        if (desc1.classList.contains('hidden')) {
+            desc1.classList.replace("hidden","block")
+            btn1.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" /></svg>'
+        }
+        else{
+            desc1.classList.replace("block","hidden")
+            btn1.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>'
+        }
+    })
+    btn2.addEventListener('click', function(){
+        if (desc2.classList.contains('hidden')) {
+            desc2.classList.replace("hidden","block")
+            btn2.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" /></svg>'
+        }
+        else{
+            desc2.classList.replace("block","hidden")
+            btn2.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>'
+        }
+    })
+
+    btn3.addEventListener('click', function(){
+        if (desc3.classList.contains('hidden')) {
+            desc3.classList.replace("hidden","block")
+            btn3.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" /></svg>'
+        }
+        else{
+            desc3.classList.replace("block","hidden")
+            btn3.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>'
+        }
+    })
+</script>
+    
+</body>
+</html>
